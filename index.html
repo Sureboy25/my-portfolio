@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav>
+    <ul>
+        <li>
+            <a href="#home">Home</a>
+        </li>
+        <li class="dropdown">
+            <a href="#projects">Projects</a>
+            <!--
+            <div class="dropdown-content">
+                <a href="#projects">Website</a>
+                <a href="#projects">Application</a>
+                <a href="#projects">Graphic Design</a>
+            </div>
+            -->
+        </li>
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+        <li>
+            <a class="hire-nav" href="https://wa.me/255688652102" target="_blank">Hire Me</a>
+        </li>
+    </ul>
+</nav>
+<!-- PROFILE SECTION -->
+<section id="home" class="profile">
+    <div class="profile-image">
+        <img src="logo/sure.png" alt="Profile Picture">
+    </div>
+    <div class="profile-content">
+        <div class="profile-text hidden">
+            <h1> Hello, I'm Matogolo </h1>
+            <p>
+                I am a passionate developer who creates websites, applications and graphic designs. I enjoy building modern and user-friendly digital solutions.
+            </p>
+            <a href="CV/2..pdf" download class="hire-btn">Download CV</a>
+        </div>
+        <div class="profile-text hidden">
+            <h1> I'm Developer </h1>
+            <h2> Web Developer & Designer </h2>
+            <p>
+                I create modern websites, applications and creative digital solutions for businesses and organizations.
+            </p>
+            <a href="templates.html" class="hire-btn"> View Template </a>
+        </div>
+        <div class="profile-text hidden">
+            <h1> I'm Developer </h1>
+            <h2> Web Developer & Designer </h2>
+            <p>
+                I create modern websites, applications and creative digital solutions for businesses and organizations.
+            </p>
+            <a href="templates.html" class="hire-btn"> View Template </a>
+        </div>
+    </div>
+</section>
+<!-- PROJECT SECTION -->
+<section id="projects" class="projects hidden">
+    <h1> My Projects </h1>
+    <p class="project-title"> Here are some of the projects I have completed. </p>
+    <div class="project-container">
+        <div class="project-card">
+            <img src="logo/web.png">
+            <h2> Website </h2>
+            <p> Responsive websites developed using HTML, CSS, JavaScript and PHP. </p>
+            <button> View Project </button>
+        </div>
+        <div class="project-card">
+            <img src="logo/app.png">
+            <h2> Application </h2>
+            <p> Desktop and mobile applications built for businesses and organizations. </p>
+            <button> View Project </button>
+        </div>
+        <div class="project-card">
+            <img src="logo/bidega.png" alt="Graphic Design">
+            <h2> Graphic Design </h2>
+            <p> Professional posters, logos, banners, business cards and flyers. </p>
+            <button onclick="openGallery()"> View Project </button>
+        </div>
+        <!-- GRAPHIC PREVIEW -->
+        <div id="graphicPreview" class="gallery-overlay">
+            <span onclick="closeGallery()" class="close-btn"> &times; </span>
+            <div class="gallery-content"> 
+                <img src="logo/bidega.png">
+                <img src="logo/company.png">
+                <img src="logo/logo1.png">
+                <img src="logo/logo2.png">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SKILLS SECTION -->
+ <section id="skills" class="skills hidden">
+    <h1> My Skills </h1>
+    <div class="skills-container">
+        <div class="skill-box">
+            <h2> Programming Skills </h2>
+            <p>
+                HTML5/CSS3<br>
+                JavaScript<br>
+                PHP<br>
+                MySQL<br>
+                C/C++<br>
+                Python<br>
+                Java<br>
+                Kotlin<br>
+                Dart
+            </p>   
+        </div>
+        <div class="skill-box">
+            <h2> Tools & Frameworks </h2>
+            <p>
+                Pycharm<br>
+                Flutter<br>
+                Laravel<br>
+                Android Studio<br>
+                Visual Studio<br>
+                Visual Studio Code<br>
+                Adobe Suite<br>
+                Git & GitHub
+            </p>
+        </div>
+    </div>
+</section>
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact hidden">
+    <h1>Contact Me</h1>
+    <div class="contact-container">
+        <div class="contact-card">
+            <h2>Get In Touch</h2>
+            <p> If you have a project, idea or opportunity, feel free to contact me. </p>
+            <p> Email: suleimanimatogolo@gmail.com </p>
+            <p> WhatsApp: +255 688 652 10 </p>
+            <p> Location: Tanzania </p>
+            <div class="contact-buttons">
+                <a href="mailto:matogolo@gmail.com" class="email-btn"> Send Email </a>
+                <a href="https://wa.me/255688652102" target="_blank" class="whatsapp-btn"> WhatsApp </a>
+            </div>
+        </div>
+        <div class="contact-card">
+            <h2>Send Message</h2>
+            <form id="contact-form">
+                <input type="text"name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required> </textarea>
+                <button type="submit"> Send Message </button>
+                <p id="form-message"></p>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- FOOTER -->
+<footer> 
+    <div class="social-links">
+        <a href="#"> Facebook </a>
+        <a href="#"> Instagram </a>
+        <a href="https://wa.me/255688652102" target="_blank"> WhatsApp </a>
+        <a href="#"> GitHub </a>
+    </div>
+    <p> Developed by Matogolo &copy; 2026 | All rights reserved. </p>
+</footer>
+<script src="profile.js"></script>
+</body>
+</html>

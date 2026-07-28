@@ -1,0 +1,478 @@
+/* ================= GENERAL ================= */
+*{
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+}
+body{
+    margin:0;
+    background-image:url("logo/logo2.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/*
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    z-index:-1;
+}
+*/
+/* ================= NAVBAR ================= */
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    background:#453471;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+li{
+    position:relative;
+}
+li a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:18px 20px;
+}
+li a:hover{
+    background:#2d2150;
+}
+.hire-nav{
+    background:rgba(122,18,148,0.7);
+    border-radius:8px;
+    margin-left:20px;
+}
+.hire-nav:hover{
+    background:darkblue;
+}
+/* Dropdown */
+/*
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:55px;
+    left:0;
+    background:white;
+    min-width:180px;
+}
+.dropdown-content a{
+    color:black;
+    padding:12px 16px;
+}
+.dropdown-content a:hover{
+    background:#ddd;
+}
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+*/
+/* ================= PROFILE ================= */
+.profile{
+    min-height:750px;
+    padding-top:130px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding-right:70px;
+    color:white;
+}
+.profile-image{
+    position:fixed;
+    left:20px;
+    top:180px;
+    z-index:5;
+}
+.profile-image img{
+    width:420px;
+    height:auto;
+}
+.profile-content{
+    display:flex;
+    flex-direction:row;
+    gap:40px;
+    align-items:center;
+}
+.profile-text{
+    width:350px;
+    background:rgba(0,0,0,0.7);
+    padding:30px;
+    border-radius:40px;
+}
+.profile-text h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+.profile-text h2{
+    color:#b388ff;
+    font-size:28px;
+}
+.profile-text p{
+    font-size:20px;
+    line-height:1.8;
+    font-weight:bold;
+}
+.hire-btn{
+    display:inline-block;
+    background:#7b2cbf;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+}
+.hire-btn:hover{
+    background:darkblue;
+}
+/* ================= ANIMATION ================= */
+.hidden{
+    opacity:0;
+    transform:translate(120px,-80px);
+    transition:all .8s ease;
+}
+.show{
+    opacity:1;
+    transform:translate(0,0);
+}
+/* ================= PROJECTS ================= */
+.projects{
+    padding:100px 80px;
+    color:white;
+    text-align:center;
+    margin-left:500px;
+    scroll-margin-top:90px;
+}
+.projects h1{
+    font-size:50px;
+}
+.project-title{
+    font-size:20px;
+    margin-bottom:50px;
+}
+.project-container{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+.project-card{
+    width:320px;
+    background:rgba(0,0,0,0.65);
+    border-radius:20px;
+    overflow:hidden;
+    padding-bottom:20px;
+    transition:.4s;
+}
+.project-card:hover{
+    transform:translateY(-10px);
+}
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+.project-card h2{
+    color:#b388ff;
+}
+.project-card p{
+    padding:0 20px;
+    line-height:1.7;
+}
+.project-card button{
+    padding:12px 30px;
+    border:none;
+    border-radius:8px;
+    background:#7b2cbf;
+    color:white;
+    cursor:pointer;
+}
+/* ================= SKILLS ================= */
+.skills{
+    padding:100px 80px;
+    color:white;
+    margin-left:500px;
+    scroll-margin-top:90px;
+}
+.skills h1{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:60px;
+}
+.skills-container{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+.skill-box{
+    width:350px;
+    background:rgba(0,0,0,0.65);
+    border:2px solid #7b2cbf;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    transition:.3s;
+}
+.skill-box:hover{
+    transform:translateY(-10px);
+    background:rgba(123,44,191,0.4);
+}
+.skill-box h2{
+    color:#b388ff;
+    font-size:30px;
+}
+.skill-box p{
+    font-size:20px;
+    line-height:2;
+    font-weight:bold;
+}
+/* ================= GRAPHIC GALLERY ================= */
+.graphic-gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    padding:15px;
+}
+.graphic-gallery img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+.graphic-gallery img:hover{
+    transform:scale(1.05);
+}
+/* ================= GRAPHIC PREVIEW ================= */
+.gallery-overlay{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    z-index:2000;
+    overflow:auto;
+    padding:50px;
+}
+.gallery-content{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    max-width:900px;
+    margin:auto;
+}
+.gallery-content img{
+    width:100%;
+    border-radius:20px;
+}
+.close-btn{
+    position:absolute;
+    right:40px;
+    top:20px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+}
+/* ================= CONTACT ================= */
+.contact{
+    padding:100px 80px;
+    color:white;
+    margin-left:500px;
+    scroll-margin-top:90px;
+}
+.contact h1{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:60px;
+}
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.contact-card{
+    width:420px;
+    background:rgba(0,0,0,0.65);
+    padding:35px;
+    border-radius:25px;
+    border:2px solid #7b2cbf;
+}
+.contact-card h2{
+    color:#b388ff;
+    text-align:center;
+}
+.contact-card p{
+    font-size:20px;
+    line-height:1.8;
+}
+.contact-card input,
+.contact-card textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+.contact-card textarea{
+    height:150px;
+    resize:none;
+}
+.contact-card button{
+    width:100%;
+    padding:15px;
+    background:#7b2cbf;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+.contact-card button:hover{
+    background:darkblue;
+}
+#form-message{
+    text-align:center;
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+}
+.contact-buttons a{
+    padding:12px 25px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:bold;
+}
+.email-btn{
+    background:#7b2cbf;
+}
+.email-btn:hover{
+    background:#4c1d95;
+}
+.whatsapp-btn{
+    background:#25D366;
+}
+.whatsapp-btn:hover{
+    background:#128C7E;
+}
+/* ================= FOOTER ================= */
+footer{
+    background:#453471;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+.social-links a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-size:18px
+}
+.social-links a:hover{
+    color:#b388ff;
+}
+/* ================= TABLET ================= */
+@media(max-width:1000px){
+    .profile-image{
+        position:static;
+        text-align:center;
+        margin-bottom:30px;
+    }
+    .profile-image img{
+        width:300px;
+    }
+    .profile{
+        flex-direction:column;
+        padding:120px 20px 50px;
+    }
+    .profile-content{
+        flex-direction:column;
+    }
+    .profile-text{
+        width:90%;
+    }
+    .projects,
+    .skills,
+    .contact{
+        margin-left:0;
+        padding:70px 30px;
+    }
+}
+/* ================= MOBILE ================= */
+@media(max-width:600px){
+    ul{
+        height:auto;
+        flex-wrap:wrap;
+        padding:10px;
+    }
+    li a{
+        padding:10px;
+        font-size:14px;
+    }
+    .profile{
+        padding-top:180px;
+    }
+    .profile-image{
+        position:static;
+    }
+    .profile-image img{
+        width:230px;
+    }
+    .profile-text{
+        width:100%;
+        padding:20px;
+    }
+    .profile-text h1{
+        font-size:32px;
+    }
+    .profile-text h2{
+        font-size:22px;
+    }
+    .profile-text p{
+        font-size:17px;
+    }
+    .projects h1,
+    .skills h1,
+    .contact h1{
+        font-size:35px;
+    }
+    .project-card,
+    .skill-box,
+    .contact-card{
+        width:100%;
+    }
+    .contact-buttons{
+        flex-direction:column;
+    }
+    .contact-buttons a{
+        text-align:center;
+    }
+    footer{
+        font-size:14px;
+    }
+}
