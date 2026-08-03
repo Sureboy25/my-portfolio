@@ -335,7 +335,7 @@ function openGallery(){
     if(!gallery) return;
 
 
-    gallery.style.display="block";
+    gallery.style.display = window.innerWidth <= 768 ? "flex" : "block";
 
 
     document.body.style.overflow="hidden";
@@ -399,6 +399,103 @@ gallery.addEventListener("click",(event)=>{
 
 
 }
+
+
+
+
+
+/* ================= ZOOM IMAGE ================= */
+
+
+const zoomViewer = document.getElementById("zoomViewer");
+
+const zoomImage = document.getElementById("zoomImage");
+
+const zoomCaption = document.getElementById("zoomCaption");
+
+
+
+document
+.querySelectorAll(".gallery-item img")
+.forEach(img=>{
+
+
+    img.addEventListener("click",()=>{
+
+
+        zoomImage.src = img.src;
+
+
+        const caption = img.closest(".gallery-item").querySelector("p");
+
+
+        zoomCaption.textContent = caption ? caption.textContent : "";
+
+
+        zoomViewer.style.display = "flex";
+
+
+    });
+
+
+});
+
+
+
+function closeZoom(){
+
+
+    if(!zoomViewer) return;
+
+
+    zoomViewer.style.display = "none";
+
+
+    zoomImage.src = "";
+
+
+    zoomCaption.textContent = "";
+
+
+}
+
+
+
+if(zoomViewer){
+
+
+zoomViewer.addEventListener("click",(event)=>{
+
+
+    if(event.target === zoomViewer){
+
+
+        closeZoom();
+
+
+    }
+
+
+});
+
+
+}
+
+
+
+document.addEventListener("keydown",(event)=>{
+
+
+    if(event.key === "Escape"){
+
+
+        closeZoom();
+
+
+    }
+
+
+});
 
 
 

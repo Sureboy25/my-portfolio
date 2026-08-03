@@ -4,16 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Matogolo Portfolio</title>
+  <meta name="google-site-verification" content="48iaufUDd0ndHcUwoK1gd26Voska4qWqD0WNsikL4Os" />
+
+  <title>Matogolo | Web Developer & Graphic Designer in Tanzania</title>
+
+  <meta name="description" content="Matogolo is a Web Developer & Designer building modern, responsive websites, mobile applications and creative graphic designs (logos, posters, business cards) for businesses and organizations in Tanzania.">
+
+  <meta name="keywords" content="Matogolo, web developer Tanzania, mobile app developer, graphic designer, freelance developer Dar es Salaam, website design, logo design, portfolio">
+
+  <meta name="author" content="Matogolo">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://sureboy25.github.io/">
+
+  <!-- Open Graph / Facebook / WhatsApp preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Matogolo | Web Developer & Graphic Designer">
+  <meta property="og:description" content="Modern, responsive websites, mobile applications and creative graphic designs for businesses and organizations.">
+  <meta property="og:image" content="https://sureboy25.github.io/logo/sure.png">
+  <meta property="og:url" content="https://sureboy25.github.io/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Matogolo | Web Developer & Graphic Designer">
+  <meta name="twitter:description" content="Modern, responsive websites, mobile applications and creative graphic designs for businesses and organizations.">
+  <meta name="twitter:image" content="https://sureboy25.github.io/logo/sure.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo/sure.png">
+  <link rel="apple-touch-icon" href="logo/sure.png">
 
   <link rel="stylesheet" href="profile.css">
   <link rel="stylesheet" href="fonte awasome/fontawesome-free-7.3.1-web/css/all.min.css">
+
+  <!-- Structured data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Matogolo",
+    "jobTitle": "Web Developer & Designer",
+    "url": "https://sureboy25.github.io/",
+    "image": "https://sureboy25.github.io/logo/sure.png",
+    "sameAs": [
+      "https://github.com/Sureboy25"
+    ],
+    "knowsAbout": ["Web Development", "Mobile Applications", "Graphic Design"]
+  }
+  </script>
+
 </head>
 
 <body>
 
 <!-- ================= NAVBAR ================= -->
 <nav>
+  <div class="nav-brand">
+    <img src="logo/logo1.png" alt="Matogolo Logo">
+    <span>Matogolo Developer</span>
+  </div>
+
   <div class="menu-toggle" aria-label="Open menu" aria-expanded="false">
     <i class="fa-solid fa-bars"></i>
   </div>
@@ -216,30 +267,41 @@ View Project
 
   <div class="gallery-content">
 
-    <img 
-    src="logo/company.png"
-    alt="Design 1"
-    loading="lazy">
+    <div class="gallery-item">
+      <img src="logo/company.png" alt="Design 1" loading="lazy">
+      <p>Company Logo</p>
+    </div>
 
+    <div class="gallery-item">
+      <img src="logo/bidega.png" alt="Design 2" loading="lazy">
+      <p>Bidega Design</p>
+    </div>
 
-    <img 
-    src="logo/bidega.png"
-    alt="Design 2"
-    loading="lazy">
+    <div class="gallery-item">
+      <img src="logo/logo1.png" alt="Design 3" loading="lazy">
+      <p>Logo Design 1</p>
+    </div>
 
-
-    <img 
-    src="logo/logo1.png"
-    alt="Design 3"
-    loading="lazy">
-
-
-    <img 
-    src="logo/logo2.png"
-    alt="Design 4"
-    loading="lazy">
+    <div class="gallery-item">
+      <img src="logo/logo2.png" alt="Design 4" loading="lazy">
+      <p>Logo Design 2</p>
+    </div>
 
   </div>
+
+
+  <div id="zoomViewer" class="zoom-overlay">
+
+    <span class="zoom-close" onclick="closeZoom()">
+      <i class="fa-solid fa-xmark"></i>
+    </span>
+
+    <img id="zoomImage" src="" alt="Zoomed design">
+
+    <p id="zoomCaption"></p>
+
+  </div>
+
 
 </div>
 
@@ -474,7 +536,7 @@ GitHub
 Developed by Matogolo © 
 <span id="year"></span>
 
-| All rights reserved.
+| All rights reserved. 
 
 </p>
 
