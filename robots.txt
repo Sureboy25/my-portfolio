@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sureboy25.github.io/sitemap.xml
+Sitemap: https://sureboy25.github.io/my-portfolio/sitemap.xml
