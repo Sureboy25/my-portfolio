@@ -140,6 +140,29 @@ function closeGallery(){
     if(!gallery) return;
     gallery.style.display="none";
 }
+
+/* If scrolling brings the gallery (or zoom) up to where it would
+   overlap the fixed navbar, close it automatically. */
+const NAVBAR_HEIGHT = 70;
+
+window.addEventListener("scroll",()=>{
+
+    if(gallery && gallery.style.display === "block"){
+        const rect = gallery.getBoundingClientRect();
+        if(rect.top <= NAVBAR_HEIGHT){
+            closeGallery();
+        }
+    }
+
+    if(typeof zoomViewer !== "undefined" && zoomViewer && zoomViewer.style.display === "flex"){
+        const rect = zoomViewer.getBoundingClientRect();
+        if(rect.top <= NAVBAR_HEIGHT){
+            closeZoom();
+        }
+    }
+
+},{passive:true});
+
 document.addEventListener("keydown",(event)=>{
     if(event.key==="Escape"){
         closeGallery();
