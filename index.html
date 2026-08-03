@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="google-site-verification" content="48iaufUDd0ndHcUwoK1gd26Voska4qWqD0WNsikL4Os" />
+
   <title>Matogolo | Web Developer & Graphic Designer in Tanzania</title>
 
   <meta name="description" content="Matogolo is a Web Developer & Designer building modern, responsive websites, mobile applications and creative graphic designs (logos, posters, business cards) for businesses and organizations in Tanzania.">
@@ -12,7 +13,9 @@
   <meta name="keywords" content="Matogolo, web developer Tanzania, mobile app developer, graphic designer, freelance developer Dar es Salaam, website design, logo design, portfolio">
 
   <meta name="author" content="Matogolo">
+
   <meta name="robots" content="index, follow">
+
   <link rel="canonical" href="https://sureboy25.github.io/my-portfolio/">
 
   <!-- Open Graph / Facebook / WhatsApp preview -->
@@ -31,6 +34,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo/sure.png">
   <link rel="apple-touch-icon" href="logo/sure.png">
+
   <link rel="stylesheet" href="profile.css">
   <link rel="stylesheet" href="fonte awasome/fontawesome-free-7.3.1-web/css/all.min.css">
 
@@ -49,163 +53,500 @@
     "knowsAbout": ["Web Development", "Mobile Applications", "Graphic Design"]
   }
   </script>
+
 </head>
+
 <body>
-  <!-- ================= NAVBAR ================= -->
-   <nav>
-    <div class="nav-brand">
-      <img src="logo/logo1.png" alt="Matogolo Logo">
-      <span>Matogolo Developer</span>
-    </div>
-    <div class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-    <ul id="nav-menu">
-      <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
-      <li><a href="#projects"><i class="fa-solid fa-folder-open"></i>Projects</a></li>
-      <li><a href="#skills"><i class="fa-solid fa-user"></i>About us</a></li>
-      <li><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
-    </ul>
-  </nav>
-  <!-- ================= HOME PAGE ================= -->
-   <section id="home" class="profile">
-    <div class="profile-content">
-      <div class="profile-image hidden">
-        <img src="logo/sure.png" alt="Matogolo Profile Photo" loading="lazy">
-      </div>
-      <div class="profile-text hidden">
-        <h1><i class="fa-solid fa-code"></i><span id="name"></span></h1>
-        <h2><span id="title"></span></h2>
-        <p id="description1"></p>
-        <div class="home-buttons">
-          <a href="#projects" class="hire-btn project-btn">
-            <i class="fa-solid fa-folder-open"></i>View Projects
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================= PROJECTS ================= -->
-   <section id="projects" class="projects hidden">
-    <h1><i class="fa-solid fa-diagram-project"></i>My Projects</h1>
-    <p class="project-title">
-      <i class="fa-solid fa-list-check"></i>Here are some projects I have completed.
-    </p>
-    <div class="project-container">
-      <div class="project-card">
-        <img src="logo/web.png" alt="Website project" loading="lazy">
-        <h2><i class="fa-solid fa-globe"></i>Website</h2>
-        <p>
-          <i class="fa-solid fa-code"></i>
-          Responsive websites developed for businesses and organizations.
-        </p>
-        <button><i class="fa-solid fa-eye"></i>View Project</button>
-      </div>
-      <div class="project-card">
-        <img src="logo/app.png" alt="Application project" loading="lazy">
-        <h2><i class="fa-solid fa-mobile-screen-button"></i>Application</h2>
-        <p>
-          <i class="fa-solid fa-layer-group"></i>
-          Desktop and mobile applications built for businesses and organizations.
-        </p>
-        <button><i class="fa-solid fa-eye"></i>View Project</button>
-      </div>
-      <div class="project-card">
-        <img src="logo/company.png" alt="Graphic design project" loading="lazy">
-        <h2><i class="fa-solid fa-palette"></i>Graphic Design</h2>
-        <p>
-          <i class="fa-solid fa-pen-nib"></i>
-          Professional posters, logos, banners, business cards and flyers.
-        </p>
-        <button onclick="openGallery()"><i class="fa-solid fa-images"></i>View Project</button>
-      </div>
-    </div>
-    <!-- GRAPHIC GALLERY -->
-     <div id="graphicPreview" class="gallery-overlay">
-      <span class="close-btn" onclick="closeGallery()"><i class="fa-solid fa-xmark"></i></span>
-      <div class="gallery-content">
-        <div class="gallery-item">
-          <img src="logo/company.png" alt="Design 1" loading="lazy">
-          <p>Company Logo</p>
-        </div>
-        <div class="gallery-item">
-          <img src="logo/bidega.png" alt="Design 2" loading="lazy">
-          <p>Personal Business logo</p>
-        </div>
-        <div class="gallery-item">
-          <img src="logo/logo1.png" alt="Design 3" loading="lazy">
-          <p>Logo Design 1</p>
-        </div>
-        <div class="gallery-item">
-          <img src="logo/logo2.png" alt="Design 4" loading="lazy">
-          <p>Logo Design 2</p>
-        </div>
-      </div>
-      <div id="zoomViewer" class="zoom-overlay">
-        <span class="zoom-close" onclick="closeZoom()"><i class="fa-solid fa-xmark"></i></span>
-        <img id="zoomImage" src="" alt="Zoomed design">
-        <p id="zoomCaption"></p>
-      </div>
-    </div>
-  </section>
-  <!-- ================= ABOUT US ================= -->
-   <section id="skills" class="skills hidden">
-    <h1><i class="fa-solid fa-star"></i>About us</h1>
-    <div class="skills-container">
-      <div class="skill-box">
-        <h2><i class="fa-solid fa-code"></i></h2>
-        <p>
-          I am a passionate Web Developer & Designer dedicated to creating modern, responsive and user-friendly digital solutions.
-        </p>
-        <p>
-          I enjoy turning ideas into functional websites, mobile applications and creative designs that help businesses and organizations grow.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!-- ================= CONTACT ================= -->
-   <section id="contact" class="contact hidden">
-    <h1><i class="fa-solid fa-address-book"></i>Contact Me</h1>
-    <div class="contact-container">
-      <div class="contact-card">
-        <h2><i class="fa-solid fa-comments"></i>Get In Touch</h2>
-        <p>
-          <i class="fa-solid fa-circle-info"></i>
-          If you have a project, idea or opportunity, feel free to contact me.
-        </p>
-        <div class="contact-buttons">
-          <a href="mailto:suleimanimatogolo@gmail.com" class="email-btn">
-            <i class="fa-solid fa-paper-plane"></i>Send Email
-          </a>
-          <a href="https://wa.me/255675808639" target="_blank" class="whatsapp-btn">
-            <i class="fa-brands fa-whatsapp"></i>WhatsApp
-          </a>
-        </div>
-      </div>
-      <div class="contact-card">
-        <h2><i class="fa-solid fa-message"></i>Send Message</h2>
-        <form id="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit"><i class="fa-solid fa-paper-plane"></i>Send Message</button>
-          <p id="form-message"></p>
-        </form>
-      </div>
-    </div>
-  </section>
-  <!-- ================= FOOTER ================= -->
-   <footer>
-    <div class="social-links">
-      <a href="https://github.com/Sureboy25" target="_blank">
-        <i class="fa-brands fa-github"></i>GitHub
+
+<!-- ================= NAVBAR ================= -->
+<nav>
+  <div class="nav-brand">
+    <img src="logo/logo1.png" alt="Matogolo Logo">
+    <span>Matogolo Developer</span>
+  </div>
+
+  <div class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <ul id="nav-menu">
+    <li>
+      <a href="#home">
+        <i class="fa-solid fa-house"></i>
+        Home
       </a>
+    </li>
+
+    <li>
+      <a href="#projects">
+        <i class="fa-solid fa-folder-open"></i>
+        Projects
+      </a>
+    </li>
+
+    <li>
+      <a href="#skills">
+        <i class="fa-solid fa-user"></i>
+        About us
+      </a>
+    </li>
+
+    <li>
+      <a href="#contact">
+        <i class="fa-solid fa-envelope"></i>
+        Contact
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+<!-- ================= HOME ================= -->
+<section id="home" class="profile">
+
+  <div class="profile-content">
+
+
+    <div class="profile-image hidden">
+      <img 
+        src="logo/sure.png"
+        alt="Matogolo Profile Photo"
+        loading="lazy">
     </div>
-    <p>
-      <i class="fa-solid fa-copyright"></i>
-      Developed by Matogolo © <span id="year"></span>| All rights reserved.
-    </p>
-  </footer>
-  <script src="profile.js"></script>
+
+
+    <div class="profile-text hidden">
+
+      <h1>
+        <i class="fa-solid fa-code"></i>
+        <span id="name"></span>
+      </h1>
+
+
+      <h2>
+        <span id="title"></span>
+      </h2>
+
+
+      <p id="description1"></p>
+
+
+      <div class="home-buttons">
+
+        <a href="#projects" class="hire-btn project-btn">
+          <i class="fa-solid fa-folder-open"></i>
+          View Projects
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="projects hidden">
+
+
+<h1>
+  <i class="fa-solid fa-diagram-project"></i>
+  My Projects
+</h1>
+
+
+<p class="project-title">
+  <i class="fa-solid fa-list-check"></i>
+  Here are some projects I have completed.
+</p>
+
+
+
+<div class="project-container">
+
+
+<div class="project-card">
+
+<img 
+src="logo/web.png"
+alt="Website project"
+loading="lazy">
+
+
+<h2>
+<i class="fa-solid fa-globe"></i>
+Website
+</h2>
+
+
+<p>
+<i class="fa-solid fa-code"></i>
+Responsive websites developed for businesses and organizations.
+</p>
+
+
+<button>
+<i class="fa-solid fa-eye"></i>
+View Project
+</button>
+
+</div>
+
+
+
+<div class="project-card">
+
+<img 
+src="logo/app.png"
+alt="Application project"
+loading="lazy">
+
+
+<h2>
+<i class="fa-solid fa-mobile-screen-button"></i>
+Application
+</h2>
+
+
+<p>
+<i class="fa-solid fa-layer-group"></i>
+Desktop and mobile applications built for businesses and organizations.
+</p>
+
+
+<button>
+<i class="fa-solid fa-eye"></i>
+View Project
+</button>
+
+</div>
+
+
+
+<div class="project-card">
+
+<img 
+src="logo/company.png"
+alt="Graphic design project"
+loading="lazy">
+
+
+<h2>
+<i class="fa-solid fa-palette"></i>
+Graphic Design
+</h2>
+
+
+<p>
+<i class="fa-solid fa-pen-nib"></i>
+Professional posters, logos, banners, business cards and flyers.
+</p>
+
+
+<button onclick="openGallery(event)">
+<i class="fa-solid fa-images"></i>
+View Project
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="skills" class="skills hidden">
+
+
+<h1>
+<i class="fa-solid fa-star"></i>
+About us
+</h1>
+
+
+
+<div class="skills-container">
+
+
+<div class="skill-box">
+
+
+<h2>
+<i class="fa-solid fa-code"></i>
+</h2>
+
+
+
+<p>
+I am a passionate Web Developer & Designer dedicated to creating modern,
+responsive and user-friendly digital solutions.
+</p>
+
+
+
+<p>
+I enjoy turning ideas into functional websites, mobile applications
+and creative designs that help businesses and organizations grow.
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ================= CONTACT ================= -->
+
+
+<section id="contact" class="contact hidden">
+
+
+<h1>
+<i class="fa-solid fa-address-book"></i>
+Contact Me
+</h1>
+
+
+
+
+<div class="contact-container">
+
+
+
+<div class="contact-card">
+
+
+<h2>
+<i class="fa-solid fa-comments"></i>
+Get In Touch
+</h2>
+
+
+
+<p>
+<i class="fa-solid fa-circle-info"></i>
+If you have a project, idea or opportunity, feel free to contact me.
+</p>
+
+
+
+
+<div class="contact-buttons">
+
+
+<a 
+href="mailto:matogolo@gmail.com"
+class="email-btn">
+
+<i class="fa-solid fa-paper-plane"></i>
+Send Email
+
+</a>
+
+
+
+<a 
+href="https://wa.me/255675808639"
+target="_blank"
+class="whatsapp-btn">
+
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="contact-card">
+
+
+<h2>
+<i class="fa-solid fa-message"></i>
+Send Message
+</h2>
+
+
+
+
+<form id="contact-form">
+
+
+<input 
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+
+
+<input 
+type="email"
+name="email"
+placeholder="Your Email"
+required>
+
+
+
+
+<textarea
+name="message"
+placeholder="Your Message"
+required></textarea>
+
+
+
+
+<button type="submit">
+
+<i class="fa-solid fa-paper-plane"></i>
+Send Message
+
+</button>
+
+
+
+
+<p id="form-message"></p>
+
+
+</form>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+
+<div class="social-links">
+
+
+<a 
+href="https://github.com/Sureboy25"
+target="_blank">
+
+<i class="fa-brands fa-github"></i>
+GitHub
+
+</a>
+
+
+</div>
+
+
+
+
+<p>
+
+<i class="fa-solid fa-copyright"></i>
+
+Developed by Matogolo © 
+<span id="year"></span>
+
+| All rights reserved. 
+
+</p>
+
+
+</footer>
+
+
+
+
+<!-- ================= GRAPHIC GALLERY (body-level so it can scroll with the page) ================= -->
+
+<div id="graphicPreview" class="gallery-overlay">
+
+  <span class="close-btn" onclick="closeGallery()">
+    <i class="fa-solid fa-xmark"></i>
+  </span>
+
+  <div class="gallery-content">
+
+    <div class="gallery-item">
+      <img src="logo/company.png" alt="Design 1" loading="lazy">
+      <p>Company Logo</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="logo/bidega.png" alt="Design 2" loading="lazy">
+      <p>Bidega Design</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="logo/logo1.png" alt="Design 3" loading="lazy">
+      <p>Logo Design 1</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="logo/logo2.png" alt="Design 4" loading="lazy">
+      <p>Logo Design 2</p>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="zoomViewer" class="zoom-overlay">
+
+  <span class="zoom-close" onclick="closeZoom()">
+    <i class="fa-solid fa-xmark"></i>
+  </span>
+
+  <img id="zoomImage" src="" alt="Zoomed design">
+
+  <p id="zoomCaption"></p>
+
+</div>
+
+
+<script src="profile.js"></script>
+
+
 </body>
+
 </html>

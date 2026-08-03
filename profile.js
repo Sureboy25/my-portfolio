@@ -123,28 +123,50 @@ form.addEventListener("submit", async function(e){
 }
 /* ================= GRAPHIC GALLERY ================= */
 const gallery = document.getElementById("graphicPreview");
-function openGallery(){
+
+function openGallery(event){
+    if(event) event.stopPropagation();
+
     if(!gallery) return;
-    gallery.style.display = window.innerWidth <= 768 ? "flex" : "block";
-    document.body.style.overflow="hidden";
+
+    /* Center it within whatever part of the page you're currently
+       viewing, then it scrolls with the page like any normal
+       element (not pinned). */
+    gallery.style.top = (window.scrollY + window.innerHeight / 2) + "px";
+
+    gallery.style.display = "block";
 }
 function closeGallery(){
     if(!gallery) return;
     gallery.style.display="none";
-    document.body.style.overflow="";
 }
 document.addEventListener("keydown",(event)=>{
     if(event.key==="Escape"){
         closeGallery();
+        closeZoom();
     }
 });
-if(gallery){
-gallery.addEventListener("click",(event)=>{
-    if(event.target === gallery){
-        closeGallery();
+
+/* Gallery is now a small centered box (not a full-screen backdrop),
+   so "tap anywhere outside it" is detected here instead of via a
+   click on the overlay element itself. */
+document.addEventListener("click",(event)=>{
+
+    if(!gallery) return;
+
+    if(gallery.style.display === "block"){
+
+        if(zoomViewer && zoomViewer.style.display === "flex"){
+            return;
+        }
+
+        if(!gallery.contains(event.target)){
+            closeGallery();
+        }
+
     }
+
 });
-}
 /* ================= ZOOM IMAGE GRAPHIC GALLERY ================= */
 const zoomViewer = document.getElementById("zoomViewer");
 const zoomImage = document.getElementById("zoomImage");
@@ -152,10 +174,13 @@ const zoomCaption = document.getElementById("zoomCaption");
 document
 .querySelectorAll(".gallery-item img")
 .forEach(img=>{
-    img.addEventListener("click",()=>{
+    img.addEventListener("click",(event)=>{
+        event.stopPropagation();
         zoomImage.src = img.src;
         const caption = img.closest(".gallery-item").querySelector("p");
         zoomCaption.textContent = caption ? caption.textContent : "";
+
+        zoomViewer.style.top = (window.scrollY + window.innerHeight / 2) + "px";
         zoomViewer.style.display = "flex";
     });
 });
@@ -165,17 +190,17 @@ function closeZoom(){
     zoomImage.src = "";
     zoomCaption.textContent = "";
 }
-if(zoomViewer){
-zoomViewer.addEventListener("click",(event)=>{
-    if(event.target === zoomViewer){
+
+/* Zoom is a small centered box too — tapping anywhere outside the
+   picture/caption closes it. */
+document.addEventListener("click",(event)=>{
+
+    if(!zoomViewer) return;
+
+    if(zoomViewer.style.display === "flex" && !zoomViewer.contains(event.target)){
         closeZoom();
     }
-});
-}
-document.addEventListener("keydown",(event)=>{
-    if(event.key === "Escape"){
-        closeZoom();
-    }
+
 });
 /* ================= FOOTER YEAR ================= */
 const year = document.getElementById("year");

@@ -279,38 +279,43 @@ nav a:hover{
 .skill-box p{
     font-size:26px;
     line-height:2;
-    font-weight:900px;
+    font-weight:900;
 }
 .skill-box p i{
     color:#b388ff;
     width:25px;
     margin-right:10px;
 }
+
 /* ================= GRAPHIC GALLERY ================= */
+/* position:absolute (not fixed) so it scrolls with the page instead
+   of staying pinned to the screen. Its "top" is set in JS based on
+   scroll position at the moment it's opened. */
 .gallery-overlay{
     display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.80);
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,.92);
+    border-radius:25px;
     z-index:2000;
-    padding:90px;
+    padding:30px;
+    max-width:92vw;
+    max-height:90vh;
     overflow:auto;
-    width: 1000px;
-    margin-left: 23%;
-    margin-top: 100px;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
 }
 .gallery-content{
-    max-width:900px;
     margin:auto;
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
+    grid-template-columns:repeat(2,600px);
+    gap:60px;
 }
 .gallery-item{
     text-align:center;
     background:rgba(255,255,255,.08);
     border-radius:20px;
-    padding:20px;
+    padding:50px;
     transition:.3s;
 }
 .gallery-item:hover{
@@ -318,7 +323,7 @@ nav a:hover{
 }
 .gallery-item img{
     width:100%;
-    height:180px;
+    height:500px;
     object-fit:contain;
     border-radius:10px;
     cursor:pointer;
@@ -329,35 +334,39 @@ nav a:hover{
 }
 .gallery-item p{
     margin-top:10px;
-    font-size:16px;
+    font-size:15px;
     font-weight:600;
     color:#b388ff;
 }
 .close-btn{
     position:absolute;
-    right:35px;
-    top:20px;
-    font-size:45px;
+    right:20px;
+    top:15px;
+    font-size:35px;
     cursor:pointer;
 }
+
 /* ================= GRAPHIC GALLERY ZOOM VIEWER ================= */
+/* Also absolute (not fixed) — scrolls with the page. Top set in JS. */
 .zoom-overlay{
     display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.80);
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,.95);
+    border-radius:20px;
     z-index:3000;
     align-items:center;
     justify-content:center;
     flex-direction:column;
-    padding:30px;
-    width: 1000px;
-    margin-left: 23%;
-    margin-top: 100px;
+    padding:20px;
+    max-width:92vw;
+    max-height:90vh;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
 }
 .zoom-overlay img{
-    max-width:60%;
-    max-height:80vh;
+    width:min(80vw,600px);
+    height:min(70vh,500px);
     object-fit:contain;
     border-radius:15px;
 }
@@ -370,12 +379,13 @@ nav a:hover{
 }
 .zoom-close{
     position:absolute;
-    right:30px;
-    top:20px;
-    font-size:40px;
+    right:15px;
+    top:12px;
+    font-size:32px;
     color:white;
     cursor:pointer;
 }
+
 /* ================= CONTACT ================= */
 .contact-container{
     display:flex;
@@ -451,6 +461,7 @@ footer{
 footer p i{
     color:#b388ff;
 }
+
 /* ================= TABLET DEVICES ================= */
 @media(max-width:1000px){
     .profile-text h1{
@@ -464,6 +475,7 @@ footer p i{
         height:320px;
     }
 }
+
 /* ================= MOBILE PROFESSIONAL ================= */
 @media(max-width:768px){
     body{
@@ -571,30 +583,47 @@ footer p i{
     .skill-box p{
         font-size:16px;
     }
+
+    /* Back to horizontal 2-column layout, but bigger than before. */
     .gallery-overlay{
         padding:20px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
+        max-width:94vw;
     }
     .gallery-content{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-        max-width:420px;
-        margin:0 auto;
+        grid-template-columns:repeat(2,150px);
+        gap:15px;
+        width:auto;
     }
     .gallery-item{
-        padding:10px;
+        padding:12px;
+        border-radius:18px;
     }
     .gallery-item img{
-        height:110px;
+        height:130px;
     }
     .gallery-item p{
         font-size:13px;
     }
     .close-btn{
-        right:20px;
-        font-size:35px;
+        right:15px;
+        top:12px;
+        font-size:30px;
+    }
+    .zoom-overlay{
+        padding:15px;
+        max-width:94vw;
+    }
+    .zoom-overlay img{
+        max-width:80vw;
+        max-height:60vh;
+    }
+    .zoom-close{
+        right:12px;
+        top:10px;
+        font-size:28px;
+    }
+    .zoom-overlay p{
+        font-size:14px;
     }
     .contact-buttons{
         flex-direction:column;
@@ -609,29 +638,8 @@ footer p i{
     footer p{
         font-size:14px;
     }
-    .gallery-overlay{
-        width: 345px;
-        margin-left: 7%;
-        height: 45vh;
-        margin-top: 250%;
-        background:rgba(0,0,0,.95);
-    }
-    .zoom-overlay{
-        padding:15px;
-        width: 345px;
-        margin-left: 7%;
-        height: 45vh;
-        margin-top: 250%;
-    }
-    .zoom-close{
-        right:15px;
-        top:20px;
-        font-size:30px;
-    }
-    .zoom-overlay p{
-        font-size:16px;
-    }
 }
+
 /* ================= SMALL PHONES ================= */
 @media(max-width:380px){
     .profile-text h1{
@@ -645,9 +653,16 @@ footer p i{
         height:150px;
     }
     .gallery-content{
-        max-width:340px;
+        grid-template-columns:repeat(2,130px);
+        width:auto;
+    }
+    .gallery-item{
+        padding:10px;
     }
     .gallery-item img{
-        height:120px;
+        height:110px;
+    }
+    .gallery-item p{
+        font-size:12px;
     }
 }
