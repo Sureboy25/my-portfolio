@@ -24,7 +24,6 @@ body::before{
     background:rgba(0,0,0,.55);
     z-index:-1;
 }
-
 img{
     max-width:100%;
     display:block;
@@ -286,11 +285,7 @@ nav a:hover{
     width:25px;
     margin-right:10px;
 }
-
 /* ================= GRAPHIC GALLERY ================= */
-/* position:absolute (not fixed) so it scrolls with the page instead
-   of staying pinned to the screen. Its "top" is set in JS based on
-   scroll position at the moment it's opened. */
 .gallery-overlay{
     display:none;
     position:absolute;
@@ -345,9 +340,7 @@ nav a:hover{
     font-size:35px;
     cursor:pointer;
 }
-
 /* ================= GRAPHIC GALLERY ZOOM VIEWER ================= */
-/* Also absolute (not fixed) — scrolls with the page. Top set in JS. */
 .zoom-overlay{
     display:none;
     position:absolute;
@@ -385,7 +378,6 @@ nav a:hover{
     color:white;
     cursor:pointer;
 }
-
 /* ================= CONTACT ================= */
 .contact-container{
     display:flex;
@@ -461,7 +453,6 @@ footer{
 footer p i{
     color:#b388ff;
 }
-
 /* ================= TABLET DEVICES ================= */
 @media(max-width:1000px){
     .profile-text h1{
@@ -475,7 +466,6 @@ footer p i{
         height:320px;
     }
 }
-
 /* ================= MOBILE PROFESSIONAL ================= */
 @media(max-width:768px){
     body{
@@ -583,8 +573,6 @@ footer p i{
     .skill-box p{
         font-size:16px;
     }
-
-    /* Back to horizontal 2-column layout, but bigger than before. */
     .gallery-overlay{
         padding:20px;
         max-width:94vw;
@@ -639,7 +627,6 @@ footer p i{
         font-size:14px;
     }
 }
-
 /* ================= SMALL PHONES ================= */
 @media(max-width:380px){
     .profile-text h1{
